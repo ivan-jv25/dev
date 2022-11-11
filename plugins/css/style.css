@@ -1,0 +1,19 @@
+body{
+    background-color: #1a191d;
+    
+}
+
+p, h1,h2,h3,h4,h5,h6 .navbar-dark, .nav-link{
+    color: #fff;
+}
+
+span{
+    font-size: 1.4rem;
+}
+
+.nombre{
+    font-size: 5rem;
+}
+.descripcion{
+    font-size: 1.5rem;
+}
