@@ -6,13 +6,7 @@ nav{
     background-color: #22a7f0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 .navbar-dark,
+p, h1, h2, h3, h4, h5, h6 .navbar-dark,
 .nav-link {
     color: #fff;
 }
@@ -29,3 +23,6 @@ span {
     font-size: 1.5rem;
 }
 
+.img-logo{
+    max-width: 17%;
+}
