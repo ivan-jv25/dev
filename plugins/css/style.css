@@ -1,19 +1,31 @@
-body{
-    background-color: #1a191d;
-    
+body {
+    background-color: #4b5f83;
+    background-image: linear-gradient(to bottom right, #4b5f83, #22a7f0);
+}
+nav{
+    background-color: #22a7f0;
 }
 
-p, h1,h2,h3,h4,h5,h6 .navbar-dark, .nav-link{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 .navbar-dark,
+.nav-link {
     color: #fff;
 }
 
-span{
+span {
     font-size: 1.4rem;
 }
 
-.nombre{
+.nombre {
     font-size: 5rem;
 }
-.descripcion{
+
+.descripcion {
     font-size: 1.5rem;
 }
+
