@@ -1,7 +1,12 @@
 var programacion = [ {nombre:'Python'}, {nombre:'Javascript'}, {nombre:'Java'}, {nombre:'Php'}, ];
 var DDBB         = [ {nombre:'Mysql'}, {nombre:'Sql Server'}, ];
 var herramienta  = [ {nombre:'Visual Estudio code'}, {nombre:'Mysql Workbench'}, {nombre:'Windows Terminal'}, {nombre:'AWS'}, {nombre:'S3'}, {nombre:'RDL'}, {nombre:'Postman'}, {nombre:'Photoshop'}, {nombre:'AnyDesck'}, {nombre:'Obs'}, ];
+var actividades  = [ {nombre:'Coffe', icon:'bi bi-cup-hot-fill'}, {nombre:'Code', icon:'bi-code-slash'}, {nombre:'Game', icon:'bi-controller'}, {nombre:'Music', icon:'bi-music-note-beamed'}, {nombre:'Repeat', icon:'bi-arrow-repeat'}, ]
 var estilos_btn  = [ {style:'btn-primary'}, {style:'btn-secondary'}, {style:'btn-success'}, {style:'btn-danger'}, {style:'btn-warning'}, {style:'btn-info'}, {style:'btn-light'}, {style:'btn-dark'}, ];
+var estilos_text = [  {style:'text-primary'},  {style:'text-orange'},  {style:'text-success'},  {style:'text-red'},  {style:'text-warning'},  {style:'text-cyan'},  {style:'text-blue'},  {style:'text-dark'}, ];
+var owl          = $('.owl-carousel');
+
+owl.owlCarousel({ items:5, loop:true, margin:200, autoplay:true, autoplayTimeout:500, autoplayHoverPause:true });
 
 window.onload = () =>{
     __init__()
@@ -11,7 +16,9 @@ const __init__ = () =>{
     document.getElementById('id_btn_wsp').setAttribute('onclick','envio_whatsapp()')
     lenguajes_programacion();
     herramientas_trabajo();
-    bases_de_datos()
+    bases_de_datos();
+    actividades_diarias();
+    cargar_proyectos();
 }
 
 const envio_whatsapp = () =>{
@@ -38,12 +45,33 @@ const herramientas_trabajo = () =>{
     document.getElementById('id_lista_herramienta').innerHTML = lista;
 }
 
+const actividades_diarias = () =>{
+    let lista = ``
+    actividades.forEach(element => { lista+= `<div class="col-1"> <i class="${element.icon} actividades"></i> <p class="p-actvidades">${element.nombre} <span class="${estilo_random_text()}"><strong>();</strong></span></p> </div>` });
+    document.getElementById('div_actividades').innerHTML = lista;
+}
+
+const cargar_proyectos = () =>{
+    owl.trigger('play.owl.autoplay',[410])
+}
+
+const obtener_proyectos = () =>{
+    fetch('/asset/proyectos.json')
+    .then(response => response.json())
+    .then(response =>{
+        console.log(response)
+    })
+}
+
 
 const estilo_random_btn = () =>{
-    let max          = estilos_btn.length    
-    let min          = 0
-    let index_random = 0
-    index_random     = Math.floor(Math.random() * (max - min)) + min
-
+    let index_random = ramdon_list(estilos_btn.length, 0)
     return estilos_btn[index_random].style
 }
+
+const estilo_random_text = () =>{
+    let index_random = ramdon_list(estilos_text.length, 0)
+    return estilos_text[index_random].style
+}
+
+const ramdon_list = (max, min) =>{ return Math.floor(Math.random() * (max - min)) + min }

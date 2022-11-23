@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+.parallax {
+    width: 100%;
+    height: 570px;
+
+  }
+
+  
+
 body {
     background-color: #4b5f83;
     background-image: linear-gradient(to bottom right, #4b5f83, #22a7f0);
 }
 nav{
-    background-color: #22a7f0;
+    
+    background-image: linear-gradient(to bottom left, #22a7f0, #4b5f83);
 }
 
 p, h1, h2, h3, h4, h5, h6 .navbar-dark,
@@ -26,3 +38,31 @@ span {
 .img-logo{
     max-width: 17%;
 }
+
+#home{
+    margin-top: 3%;
+}
+
+.img-ivan{
+    max-width: 15%;
+    border-radius: 100%;
+}
+
+.actividades{
+    font-size: 2rem;
+}
+
+.p-actvidades{
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.owl-dots{
+    display: none;
+}
+
+.text-yellow{ color:  #ffc107 ; }
+.text-blue{ color:  #0d6efd ; }
+.text-red{ color:  #dc3545 ; }
+.text-orange{ color:  #fd7e14 ; }
+.text-cyan{ color:  #0dcaf0 ; }

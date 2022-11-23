@@ -5,10 +5,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="plugins/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    
     <script src="plugins/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+
+
 
     <link href="plugins/css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.theme.green.css">
+    <link rel="stylesheet" href="/plugins/OwlCarousel/assets/owl.theme.green.min.css">
+    
     
   </head>
   <body>
@@ -31,57 +44,104 @@
         </div>
     </nav>
 
-
-
-    <div class="p-5 text-white text-center" id="home">
-        <h1 class="nombre">Ivan Saavedra</h1>
-        <p class="descripcion">Software Engineer - Full Stack Developer</p> 
-    </div>
-
-    <div class="container p-5 text-center" id="lenguaje">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Lenguaes de Programacion</h2>
-                <div class="col-sm-12" id="id_lista_lenguajes">
-
-                </div>
-                <h2>Bases de Datos</h2>
-                <div class="col-sm-12" id="id_lista_ddbb">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container p-5 text-center" id="herramientas">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Herramientas de Trabajo</h2>
-                <div class="col-sm-12" id="id_lista_herramienta">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container p-5 text-center" id="cursos">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Curso de Programacion</h2>
-                <p>Some text..</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container p-5 text-center" id="proyectos">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Proyectos</h2>
-                <p>Some text..</p>
+    <div class="container-fluid ">
+        <div class="parallax">
+            <div class="p-5 text-white text-center" id="home">
+                <img src="/img/ivan.png" class=" img-ivan" alt="Cinque Terre" width="304" height="236"> 
+                <h1 class="nombre">Ivan Saavedra</h1>
+                <p class="descripcion">Software Engineer - Full Stack Developer</p> 
                 
+                <div class="container text-center">
+                    <div class="row justify-content-md-center" id="div_actividades">
+                        
+                    </div>
+                  </div>
+
             </div>
         </div>
+    
+        <div class="container p-5 text-center" id="lenguaje">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Lenguaes de Programacion</h2>
+                    <div class="col-sm-12" id="id_lista_lenguajes">
+    
+                    </div>
+                    <h2>Bases de Datos</h2>
+                    <div class="col-sm-12" id="id_lista_ddbb">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container p-5 text-center" id="herramientas">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Herramientas de Trabajo</h2>
+                    <div class="col-sm-12" id="id_lista_herramienta">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container p-5 text-center" id="cursos">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Curso de Programacion</h2>
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+
+        
+    
+        <div class="container p-5 text-center" id="proyectos">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Proyectos</h2>
+                    <p>Some text..</p>
+
+                    
+                    <div class="owl-carousel owl-theme">
+                        <div>
+                            <div class="card" style="width:300%">
+                                <img class="card-img-top" src="/img/modulos/amarillo.png" >
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width:300%">
+                                <img class="card-img-top" src="/img/modulos/azul.png" >
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width:300%">
+                                <img class="card-img-top" src="/img/modulos/morado.png" >
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width:300%">
+                                <img class="card-img-top" src="/img/modulos/rojo.png" >
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card" style="width:300%">
+                                <img class="card-img-top" src="/img/modulos/blanco.png" >
+                            </div>
+                        </div>
+                       
+                      </div>
+                      
+                    
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
+
   
 
     <footer class="mt-5 p-4 bg-dark text-white text-center" id="conctacto">
@@ -105,11 +165,13 @@
             <div class="col-sm-3"></div>
         </div>
     </footer>
-
     
-
     
-<script src="js/app.js"></script>
+    <script src="/plugins/js/jquery.js"></script>
+    <script src="/plugins/OwlCarousel/owl.carousel.js"></script>
+    <script src="/plugins/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="js/app.js"></script>
+
   </body>
 
   
