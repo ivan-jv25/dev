@@ -52,7 +52,7 @@ const actividades_diarias = () =>{
 
 const cargar_proyectos = () =>{
     
-    fetch('asset/proyectos.json')
+    fetch('./asset/proyectos.json')
     .then(response => response.json())
     .then(response =>{
         let list = ``
