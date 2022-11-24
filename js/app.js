@@ -4,9 +4,7 @@ var herramienta  = [ {nombre:'Visual Estudio code'}, {nombre:'Mysql Workbench'},
 var actividades  = [ {nombre:'Coffe', icon:'bi bi-cup-hot-fill'}, {nombre:'Code', icon:'bi-code-slash'}, {nombre:'Game', icon:'bi-controller'}, {nombre:'Music', icon:'bi-music-note-beamed'}, {nombre:'Repeat', icon:'bi-arrow-repeat'}, ]
 var estilos_btn  = [ {style:'btn-primary'}, {style:'btn-secondary'}, {style:'btn-success'}, {style:'btn-danger'}, {style:'btn-warning'}, {style:'btn-info'}, {style:'btn-light'}, {style:'btn-dark'}, ];
 var estilos_text = [  {style:'text-primary'},  {style:'text-orange'},  {style:'text-success'},  {style:'text-red'},  {style:'text-warning'},  {style:'text-cyan'},  {style:'text-blue'},  {style:'text-dark'}, ];
-var owl          = $('.owl-carousel');
 
-owl.owlCarousel({ items:5, loop:true, margin:200, autoplay:true, autoplayTimeout:500, autoplayHoverPause:true });
 
 window.onload = () =>{
     __init__()
@@ -51,15 +49,19 @@ const actividades_diarias = () =>{
     document.getElementById('div_actividades').innerHTML = lista;
 }
 
-const cargar_proyectos = () =>{
-    owl.trigger('play.owl.autoplay',[410])
-}
 
-const obtener_proyectos = () =>{
+const cargar_proyectos = () =>{
+    
     fetch('/asset/proyectos.json')
     .then(response => response.json())
     .then(response =>{
-        console.log(response)
+        let list = ``
+        response.forEach(element => { list += `<div class="item"><a href="${element.URL}" target="_blank"><div class="image" style="width:300%"><img class=" rounded" src="${element.Imagen}" ></div></a></div>` });
+        document.getElementById('id_lista_proyectos').innerHTML = list;
+
+        let owl = $('.owl-carousel');
+        owl.owlCarousel({ items:5, loop:true, margin:200, autoplay:true, autoplayTimeout:500, autoplayHoverPause:true,responsiveClass:true, responsive:{ 0:{ items:1,margin:200, nav:true }, 600:{ items:3,margin:200, nav:true }, 1000:{ items:5,margin:200, nav:true } } });
+        owl.trigger('play.owl.autoplay',[2000])
     })
 }
 
@@ -75,3 +77,7 @@ const estilo_random_text = () =>{
 }
 
 const ramdon_list = (max, min) =>{ return Math.floor(Math.random() * (max - min)) + min }
+
+const test = () =>{
+    
+}

@@ -1,17 +1,32 @@
 [
     {
+        "Nombre":"Appnet Technology",
+        "Imagen":"img/modulos/appnettech.png",
+        "URL":"http://appnettech.cl/"
+    },
+    {
         "Nombre":"ahorcado",
-        "Imagen":"",
+        "Imagen":"img/modulos/amarillo.png",
         "URL":""
     },
     {
         "Nombre":"Logo Netflix",
-        "Imagen":"",
+        "Imagen":"img/modulos/azul.png",
         "URL":""
     },
     {
         "Nombre":"Ruleta",
-        "Imagen":"",
+        "Imagen":"img/modulos/morado.png",
+        "URL":""
+    },
+    {
+        "Nombre":"Ruleta",
+        "Imagen":"img/modulos/rojo.png",
+        "URL":""
+    },
+    {
+        "Nombre":"Ruleta",
+        "Imagen":"img/modulos/blanco.png",
         "URL":""
     }
 ]

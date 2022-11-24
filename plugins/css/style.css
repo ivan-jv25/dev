@@ -2,67 +2,87 @@
 
 
 .parallax {
-    width: 100%;
-    height: 570px;
-
-  }
-
-  
-
+    width                : 100%;
+    height               : 570px;
+    background-image     : url('/img/fondo.png');
+    background-repeat    : repeat-x;
+    background-repeat    : repeat-y;
+    background-position-x: center;
+    background-position-y: center;
+}
 body {
     background-color: #4b5f83;
     background-image: linear-gradient(to bottom right, #4b5f83, #22a7f0);
 }
-nav{
-    
+nav {
     background-image: linear-gradient(to bottom left, #22a7f0, #4b5f83);
 }
+p, h1, h2, h3, h4, h5, h6 .navbar-dark, .nav-link { color: #fff; }
 
-p, h1, h2, h3, h4, h5, h6 .navbar-dark,
-.nav-link {
-    color: #fff;
-}
+span { font-size: 1rem; }
 
-span {
-    font-size: 1.4rem;
-}
+.nombre { font-size: 5rem; }
 
-.nombre {
-    font-size: 5rem;
-}
+.descripcion { font-size: 1.5rem; }
 
-.descripcion {
-    font-size: 1.5rem;
-}
+.img-logo { max-width: 17%; }
 
-.img-logo{
-    max-width: 17%;
-}
+#home { margin-top: 3%; }
 
-#home{
-    margin-top: 3%;
-}
-
-.img-ivan{
-    max-width: 15%;
+.img-ivan {
+    max-width    : 15%;
     border-radius: 100%;
 }
 
-.actividades{
-    font-size: 2rem;
-}
+.actividades { font-size: 2rem; }
 
-.p-actvidades{
+.p-actvidades {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size : 1rem;
 }
 
-.owl-dots{
-    display: none;
+.col-1 { width: 18%; }
+
+.owl-dots { display: none; }
+
+.content-data-personal {
+    margin-inline   : 30%;
+    background-color: #ffffff77;
+    text-shadow     : 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    font-family     : sans-serif;
+    border-radius   : 3%;
 }
 
-.text-yellow{ color:  #ffc107 ; }
-.text-blue{ color:  #0d6efd ; }
-.text-red{ color:  #dc3545 ; }
-.text-orange{ color:  #fd7e14 ; }
-.text-cyan{ color:  #0dcaf0 ; }
+.text-yellow { color: #ffc107; }
+.text-blue { color: #0d6efd; }
+.text-red { color: #dc3545; }
+.text-orange { color: #fd7e14; }
+.text-cyan { color: #0dcaf0; }
+
+@media screen and (max-width:757px) {
+    .parallax { background-image     : url('/img/fondo-757.png'); }
+    .content-data-personal {
+        margin-inline: -17%;
+        margin-top: 15%;
+    }
+    .nombre { font-size: 2rem; }
+    .descripcion { font-size: 1rem; }
+    .col-1 { width: 20%; }
+    .img-ivan{display: none;}
+    .p-actvidades { font-size: 0.5rem; }
+    span { font-size: 0.7rem; }
+    .actividades { font-size: 1rem; }
+    .owl-item{width:150px !important; margin-right: 380px !important;}
+    #proyectos{
+        padding-inline: 1% !important;
+    }
+    
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .img-ivan { max-width    : 30%; }
+    .content-data-personal {
+        margin-inline: 0%;
+       
+      }
+}
